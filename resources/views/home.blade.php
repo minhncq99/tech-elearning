@@ -6,25 +6,24 @@
         <div class="col-md-8">
             <!--Start my code-->
             @guest
-                <!--Code of laravel Auth-->
-                <div class="card">
-                    <div class="card-header">Dashboard</div>
-
-                    <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-                        <!--
-                        You are logged in!
-                        -->
-                        You are need Login to see more!
-                    </div>
-                </div>
-                <!--End code of Laravel Auth-->
+                @include('page.nologin')
             @else
+                @switch(Auth::user()->level)
+                    @case(0)
+                        You are Student
+                        @break
+
+                    @case(1)
+                        You are Teacher
+                        @break
+
+                    @case(2)
+                        You are Admin
+                        @break
                 
+                    @default
+                        Default case...
+                @endswitch
             @endguest
             <!--End my code-->
         </div>
