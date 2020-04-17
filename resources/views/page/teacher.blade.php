@@ -38,7 +38,10 @@
 <div class="row" style="height: 100px;"></div>
 
 <div id="newcourses">
-      <h3 class="pb-2 text-danger">New  Coures</h3>
+      <div>
+            <h3 class="pb-2 text-danger" style="display: inline-block;">News Course</h3>
+            <span class="float-right"><a href="#">Add Course</a></span>
+      </div>
       <ul class="list-group">
       <div class="row justify-content-between">
             @for ($i = 0; $i < 3; $i++)

@@ -85,3 +85,13 @@ Route::prefix('testmodel')->group(function () {
     });
 });
 
+Route::get('news', function(){
+    $news = DB::table('news')->paginate(5)->onEachSide(1);
+    return view('page.news', compact('news'));
+});
+
+
+Route::get('courses', function(){
+    $courses = DB::table('courses')->paginate(3)->onEachSide(1);
+    return view('page.courses', compact('courses'));
+});

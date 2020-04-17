@@ -6,6 +6,9 @@
         <div class="col-md-12">
             <!--Start my code-->
             @guest
+                <div class="alert alert-danger" role="alert">
+                    You need login to see more!
+                </div>
                 @include('page.nologin')
             @else
                 @switch(Auth::user()->level)
@@ -14,7 +17,7 @@
                         @break
 
                     @case(1)
-                        You are Teacher
+                        @include('page.teacher')
                         @break
 
                     @case(2)
