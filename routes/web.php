@@ -95,3 +95,8 @@ Route::get('courses', function(){
     $courses = DB::table('courses')->paginate(3)->onEachSide(1);
     return view('page.courses', compact('courses'));
 });
+
+Route::get('detailNews/{id}', function ($id) {
+    $news = DB::table('news')->where('news_id', $id)->first();
+    return view('page.detailnews', compact('news'));
+});

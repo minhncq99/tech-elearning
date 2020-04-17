@@ -1,0 +1,29 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <!--Start my code-->
+            @guest
+              <div class="alert alert-danger" role="alert">
+                You need login to see more!
+              </div>
+                @include('page.nologin')
+            @else
+              @if($news)
+                <div class="py-5 my-5 bg-white rounded shadow-lg">
+                  <div class="list-group mx-3">
+                    <h3 class="pb-2 text-danger text-center" style="display: inline-block;">{{$news->name}}</h3>
+                    <div class="mx-3">{{ $news->content }}</div>
+                  </div>
+                </div>
+              @else
+                <div>Not exit news</div>
+              @endif
+            @endguest
+            <!--End my code-->
+        </div>
+    </div>
+</div>
+@endsection

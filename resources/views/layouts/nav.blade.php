@@ -15,8 +15,8 @@
                     Discover
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="news">News</a>
-                    <a class="dropdown-item" href="courses">Course</a>
+                    <a class="dropdown-item" href="../news">News</a>
+                    <a class="dropdown-item" href="../courses">Course</a>
                     <a class="dropdown-item" href="">Topic</a>
                 </div>
             </div>

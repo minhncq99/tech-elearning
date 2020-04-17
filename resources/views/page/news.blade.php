@@ -18,7 +18,7 @@
                   </div>
                   <ul class="list-group">
                   @foreach($news as $n)
-                    <a href="#" style="text-decoration: none;" class="mt-3">
+                    <a href="../detailNews/{{$n->news_id}}" style="text-decoration: none;" class="mt-3">
                       <li class="list-group-item justify-content-between align-items-center" style="height:120px; overflow:hidden;">
                         <h4>{{ $n->name }}</h4>
                         <div class="ml-3">{{ $n->describe }}</div>

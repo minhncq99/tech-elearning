@@ -23,7 +23,7 @@
             @php
                   $index = count($news) -$i -1;   
             @endphp
-            <a href="#" style="text-decoration: none;" class="mt-3">
+            <a href="../detailNews/{{$news[$index]->news_id}}" style="text-decoration: none;" class="mt-3">
                   <li class="list-group-item justify-content-between align-items-center" style="height:120px; overflow:hidden;">
                         <span class="badge badge-danger badge-pill float-right p-1">Hot news</span>
                         <h4>{{ $news[$index]->name }}</h4>
