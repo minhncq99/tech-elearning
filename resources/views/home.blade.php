@@ -3,14 +3,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <!--Start my code-->
             @guest
                 @include('page.nologin')
             @else
                 @switch(Auth::user()->level)
                     @case(0)
-                        You are Student
+                    @include('page.student')
                         @break
 
                     @case(1)
@@ -22,7 +22,7 @@
                         @break
                 
                     @default
-                        Default case...
+                        Login fault
                 @endswitch
             @endguest
             <!--End my code-->

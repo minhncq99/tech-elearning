@@ -1,5 +1,5 @@
 <!--Start my code-->
-<div class="text-center w-100 m-0" id="head">
+<div class="text-center w-100 pt-5 mt-5" id="head">
     <div class="row" id="margin-head"></div>
     <h1>Learn Coding With US</h1>
     <div class="input-group col-4 mx-auto row">

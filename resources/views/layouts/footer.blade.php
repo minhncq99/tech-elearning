@@ -1,7 +1,7 @@
 <!--Start my code-->
 
 <!-- Footer -->
-<footer class="page-footer font-small teal pt-4 bg-info text-secondary">
+<footer class="page-footer font-small teal pt-4 bg-info text-body">
 
     <!-- Footer Text -->
     <div class="container-fluid text-center text-md-left">

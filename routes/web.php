@@ -12,12 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    $news = App\news::all();
+    $courses = App\course::all();
+    return view('home', ['news' => $news, 'courses' => $courses]);
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', function () {
+    $news = App\news::all();
+    $courses = App\course::all();
+    return view('home', ['news' => $news, 'courses' => $courses]);
+});
+
+//Route::get('/home', 'HomeController@index')->name('home');
 
 //Route test database
 Route::prefix('testmodel')->group(function () {
@@ -76,3 +84,4 @@ Route::prefix('testmodel')->group(function () {
         print_r($data);
     });
 });
+
