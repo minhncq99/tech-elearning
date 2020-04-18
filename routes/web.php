@@ -112,3 +112,20 @@ Route::get('lesson/{id}', function ($id) {
     $lesson = DB::table('lessons')->where('lesson_id', $id)->first();
     return view('page.lesson', compact('lesson'));
 });
+
+Route::post('join', function() {
+    $users = DB::table('user_course')
+                ->where('user_id', $_POST['user_id'])
+                ->get();
+    foreach($users as $us){
+        if($us->course_id == $_POST['course_id']){
+            return redirect()->back()->with('alert',"Had join in");
+        }
+    }
+    DB::table('user_course')->insert(
+    [
+        'user_id' => $_POST['user_id'],
+        'course_id' => $_POST['course_id']
+    ]);
+    return redirect()->back()->with('alert',"Join in successful");
+});
