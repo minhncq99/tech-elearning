@@ -41,19 +41,18 @@
       <h3 class="pb-2 text-danger">New  Coures</h3>
       <ul class="list-group">
       <div class="row justify-content-between">
-            @for ($i = 0; $i < 3; $i++)
-                  @php
-                        $index = count($courses) -$i -1;   
-                  @endphp
+      @if($courses)
+            @foreach($courses as $c)
                   <div class="col-4">
-                        <a href="#" style="text-decoration: none;" class="text-primary">
+                        <a href="../detailcourse/{{$c->course_id}}" style="text-decoration: none;" class="text-primary">
                               <div class="list-group-item justify-content-between align-items-center m-1" style="height: 400px;">
                                     <span class="badge badge-primary badge-pill float-right p-1">New course</span>
-                                    <h4>{{ $courses[$index]->name }}</h4>
-                                    <div class="ml-3">{{ $courses[$index]->describe }}</div>
+                                    <h4>{{ $c->name }}</h4>
+                                    <div class="ml-3">{{ $c->describe }}</div>
                               </div>
                         </a>
                   </div>
             @endfor
+      @endif
       </div>
 </div>

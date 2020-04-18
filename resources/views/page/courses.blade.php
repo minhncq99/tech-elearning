@@ -19,7 +19,7 @@
                     <div class="row justify-content-between">
                     @foreach($courses as $c)
                       <div class="col-4">
-                        <a href="#" style="text-decoration: none;" class="text-primary">
+                        <a href="../detailcourse/{{$c->course_id}}" style="text-decoration: none;" class="text-primary">
                           <div class="list-group-item justify-content-between align-items-center m-1" style="height: 400px;">
                             <h4>{{ $c->name }}</h4>
                             <div class="ml-3">{{ $c->describe }}</div>
@@ -27,7 +27,7 @@
                         </a>
                       </div>
                     @endforeach
-                    </div>
+                  </div>
                     
                   </div>
                     <span class="float-right mt-2">
@@ -45,7 +45,7 @@
                     <div class="row justify-content-between">
                     @foreach($courses as $c)
                       <div class="col-4">
-                        <a href="#" style="text-decoration: none;" class="text-primary">
+                        <a href="../detailcourse/{{$c->course_id}}" style="text-decoration: none;" class="text-primary">
                           <div class="list-group-item justify-content-between align-items-center m-1" style="height: 400px;">
                             <h4>{{ $c->name }}</h4>
                             <div class="ml-3">{{ $c->describe }}</div>
@@ -71,7 +71,7 @@
                     <div class="row justify-content-between">
                     @foreach($courses as $c)
                       <div class="col-4">
-                        <a href="#" style="text-decoration: none;" class="text-primary">
+                        <a href="../detailcourse/{{$c->course_id}}" style="text-decoration: none;" class="text-primary">
                           <div class="list-group-item justify-content-between align-items-center m-1" style="height: 400px;">
                             <h4>{{ $c->name }}</h4>
                             <div class="ml-3">{{ $c->describe }}</div>

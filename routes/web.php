@@ -107,3 +107,8 @@ Route::get('detailcourse/{id}', function ($id) {
 
     return view('page.detailcourse', ['course' => $course, 'lessons' => $lessons]);
 });
+
+Route::get('lesson/{id}', function ($id) {
+    $lesson = DB::table('lessons')->where('lesson_id', $id)->first();
+    return view('page.lesson', compact('lesson'));
+});

@@ -19,7 +19,7 @@
                     @if($lessons)
                       <ul class="list-group">
                         @foreach($lessons as $ls)
-                              <a href="../detailcourse/{{$ls->lesson_id}}" style="text-decoration: none;" class="mt-3">
+                              <a href="../lesson/{{$ls->lesson_id}}" style="text-decoration: none;" class="mt-3">
                                     <li class="list-group-item justify-content-between align-items-center" style="height:120px; overflow:hidden;">
                                           <h4>{{ $ls->name }}</h4>
                                           <div class="ml-3">{{ $ls->content }}</div>
