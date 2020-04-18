@@ -96,7 +96,14 @@ Route::get('courses', function(){
     return view('page.courses', compact('courses'));
 });
 
-Route::get('detailNews/{id}', function ($id) {
+Route::get('detailnews/{id}', function ($id) {
     $news = DB::table('news')->where('news_id', $id)->first();
     return view('page.detailnews', compact('news'));
+});
+
+Route::get('detailcourse/{id}', function ($id) {
+    $course = DB::table('courses')->where('course_id', $id)->first();
+    $lessons = DB::table('lessons')->where('lesson_id', $id)->get();
+
+    return view('page.detailcourse', ['course' => $course, 'lessons' => $lessons]);
 });
