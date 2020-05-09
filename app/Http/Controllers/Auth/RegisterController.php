@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             //Here is my code
-            'birthdate' => date("Y-m-d H:i:s", $data['birthdate']),
+            'birthdate' => date_format($data['birthdate'],"Y/m/d H:i:s"),
             'level' => $data['level']
         ]);
     }
