@@ -27,7 +27,7 @@ class initdatabase extends Seeder
                         'name' => $i.'name',
                         'email' => $i.'email',
                         'password' => $i.'password',
-                        'birthdate' => date("y/m/d"),
+                        'birthdate' => date("Y-m-d H:i:s"),
                         'level' => $level
                     ]);
                 }
