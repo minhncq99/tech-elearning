@@ -9,7 +9,7 @@
                 <div class="alert alert-danger" role="alert">
                     You need login to see more!
                 </div>
-                @include('page.nologin')
+                @include('news.tintuc.fix')
             @else
                 @switch(Auth::user()->level)
                     @case(0)
