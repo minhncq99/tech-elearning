@@ -8,7 +8,6 @@
                 <div class="row">
                     <div class="col-lg-12" style="margin-left:50px">
                         <h1 class="page-header" style="padding-bottom:100px; font-size:32px; font-family: Times New Roman">
-                        <i class="fa fa-newspaper-o" style="margin-right:20px; font-size:40px"></i>
                             <strong>TIN CÔNG NGHỆ </strong>
                             <small style="color:gray"><strong>Thêm</strong></small>
                         </h1>

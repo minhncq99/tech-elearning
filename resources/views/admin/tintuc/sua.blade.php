@@ -8,7 +8,6 @@
                 <div class="row">
                     <div class="col-lg-12" style="margin-left:50px">
                         <h1 class="page-header" style="padding-bottom:100px; font-size:32px; font-family: Times New Roman">
-                        <i class="fa fa-newspaper-o" style="margin-right:20px; font-size:40px"></i>
                             <strong>TIN CÔNG NGHỆ </strong>
                             <small style="color:gray"><strong>{{$tintuc->tenTinTuc}}</strong></small>
                         </h1>
@@ -29,8 +28,8 @@
                           </div>
                         @endif
 
-                        <form action="admin/tintuc/sua/{{$tintuc->tinTuc_id}}" method="post" enctype="multipart/form-data">
-                          @csrf;
+                        <form action="admin/tintuc/sua/{{$tintuc->tinTuc_id}}" method="POST" enctype="multipart/form-data">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                             <div class="form-group" style="padding-bottom:60px">
                                 <h4 style="font-size:22px; font-family: Times New Roman">
                                     <label><strong>TIÊU ĐỀ</strong></label></h4>
@@ -43,7 +42,7 @@
                                 <!-- <textarea id="demo" name="tomTat" class="form-control" style="height:300px; color:black"
                                 placeholder="Vui lòng nhập tóm tắt" value="{{$tintuc->tomTat}}"></textarea> -->
                                 <textarea id="demo" name="tomTat" class="form-control ckeditor" rows="3" >
-                                    {{$tintuc->tomTat}}
+                                    {!! $tintuc->tomTat !!}
                                 </textarea>
                             </div>
                             <div class="form-group" style="padding-bottom:60px">
@@ -52,7 +51,7 @@
                                 <!-- <textarea id="demo" name="noiDung" class="form-control " rows="20" style="height:400px; color:black"
                                 placeholder="Vui lòng nhập nội dung" value="{{$tintuc->noiDung}}"></textarea> -->
                                 <textarea id="demo" name="noiDung" class="form-control ckeditor" rows="5">
-                                    {{$tintuc->noiDung}}
+                                    {!! $tintuc->noiDung !!}
                                 </textarea>
                             </div>
                             <div class="form-group" style="padding-bottom:60px">

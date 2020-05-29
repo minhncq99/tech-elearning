@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class tintuc extends Model
 {
-    protected $table = "tintucs";
+    protected $tabel = "tintucs";
     public $timestamps = false;
+    protected $primaryKey = "tinTuc_id";
 
     public function giangvien()
     {

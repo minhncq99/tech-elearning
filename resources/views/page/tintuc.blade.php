@@ -4,7 +4,7 @@
 
 <!-- Page Content -->
 
-<div style="color: black; margin-left:210px"><i class="fa fa-newspaper-o" style="margin-right:30px; font-size:40px"></i>
+<div style="color: black; margin-left:210px"><i class="fa fa-bars" style="margin-right:20px; font-size:36px"></i>
       <strong style="font-size:38px; font-family: Times New Roman">
           <b>TIN TỨC CẬP NHẬT</i></b></strong>
 </div>
@@ -49,7 +49,7 @@
 								                   <li class="comment">
 									                     <div class="comment-container">
                                             @foreach($hocvien1 as $hv1)
-										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:23px; padding-bottom:10px">
+										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:22px; padding-bottom:10px">
                                                 <strong>{{$hv1->hoTen}}</strong></h5>
                                             @endforeach
 										                        <div class="comment-meta">
@@ -57,7 +57,7 @@
                                                      <strong><i>{{$bl1->ngayDang}}</strong></i></span>
 										                        </div>
 										                        <div class="comment-body">
-											                            <p style="color:black; font-family:Times New Roman; font-size:21px; padding-top:10px">
+											                            <p style="font-family:Times New Roman; font-size:21px; padding-top:10px">
                                                       {{$bl1->noiDung}}</p>
 										                        </div>
 								                       </div>
@@ -68,7 +68,7 @@
 								                   <li class="comment">
 									                     <div class="comment-container">
                                             @foreach($giangvien1 as $gv1)
-										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:23px; padding-bottom:10px">
+										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:22px; padding-bottom:10px">
                                                 <strong>{{$gv1->hoTen}}</strong></h5>
                                             @endforeach
 										                        <div class="comment-meta">
@@ -76,7 +76,7 @@
                                                     <strong><i>{{$bl2->ngayDang}}</strong></i></span>
 										                        </div>
 										                        <div class="comment-body">
-											                            <p style="color:black; font-family:Times New Roman; font-size:21px; padding-top:10px">
+											                            <p style="font-family:Times New Roman; font-size:21px; padding-top:10px">
                                                       {{$bl2->noiDung}}</p>
 										                        </div>
 								                       </div>
@@ -87,7 +87,7 @@
 								                   <li class="comment">
 									                     <div class="comment-container">
                                             @foreach($hocvien2 as $hv2)
-										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:23px; padding-bottom:10px">
+										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:22px; padding-bottom:10px">
                                                 <strong>{{$hv2->hoTen}}</strong></h5>
                                             @endforeach
 										                        <div class="comment-meta">
@@ -95,7 +95,7 @@
                                                     <strong><i>{{$bl3->ngayDang}}</strong></i></span>
 										                        </div>
 										                        <div class="comment-body">
-											                            <p style="color:black; font-family:Times New Roman; font-size:21px; padding-top:10px">
+											                            <p style="font-family:Times New Roman; font-size:21px; padding-top:10px">
                                                        {{$bl3->noiDung}}</p>
 										                        </div>
 								                       </div>
@@ -106,7 +106,7 @@
 								                   <li class="comment">
 									                     <div class="comment-container">
                                             @foreach($giangvien2 as $gv2)
-										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:23px; padding-bottom:10px">
+										                        <h5 class="comment-author" style="font-family:Times New Roman; font-size:22px; padding-bottom:10px">
                                                 <strong>{{$gv2->hoTen}}</strong></h5>
                                             @endforeach
 										                        <div class="comment-meta">
@@ -114,7 +114,7 @@
                                                     <strong><i>{{$bl4->ngayDang}}</strong></i></span>
 										                        </div>
 										                        <div class="comment-body">
-											                            <p style="color:black; font-family:Times New Roman; font-size:21px; padding-top:10px">
+											                            <p style="font-family:Times New Roman; font-size:21px; padding-top:10px">
                                                       {{$bl4->noiDung}}</p>
 										                        </div>
 								                       </div>
@@ -124,21 +124,14 @@
 						              </div>
 					           </div>
 
-                     <!-- Write comments form -->
                      <div class="comments-form">
 						              <hr style="border: 2px solid DarkOrange"><h4 style="font-family:Times New Roman; font-size:28px; margin-top:60px; margin-bottom:60px">
                               <strong>Viết Bình Luận</strong></h4>
 						              <div class="comment-form-main">
 							            <form action="#">
 								                <div class="row">
-                                     <div class="col-md-4">
-										                      <div class="form-group" style="width:500px">
-											                        <input class="form-control" name="commenter-name" placeholder="Vui lòng nhập họ tên  . . . . . . . . . . . . " id="commenter-name"
-                                              type="text" style="font-family:Times New Roman; font-size:23px">
-										                      </div>
-									                   </div>
 									                   <div class="col-md-12">
-										                      <div class="form-group" style="margin-top:40px">
+										                      <div class="form-group">
 										  	                       <textarea class="form-control" name="commenter-message"
                                                placeholder="Vui lòng nhập nội dung bình luận  . . . . . . . . . . . . " style="font-family:Times New Roman; font-size:23px"
                                                id="commenter-message" cols="30" rows="6"></textarea>

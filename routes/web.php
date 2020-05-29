@@ -38,5 +38,3 @@ Route::group(['prefix'=>'admin'],function(){
 });
 
 Route::get('tintuc/{tinTuc_id}/{tenTinTuc}.html', 'PageController@tintuc');
-
-Route::post('comment/{binhLuan_id}','CommentController@postComment');
