@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\news;
+use App\course;
 
 class PageController extends Controller
 {
-    //Home Page
-
+    public function getSearch(Request $req){
+    	$course=course::where('name','like','%'.$req->key.'%')->get();
+    	return view('page.search',compact('course')); 	
+    }
 }

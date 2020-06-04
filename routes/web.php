@@ -129,3 +129,6 @@ Route::post('join', function() {
     ]);
     return redirect()->back()->with('alert',"Join in successful");
 });
+
+Route::get('search',['as'=>'search','uses'=>'PageController@getSearch'
+]);
