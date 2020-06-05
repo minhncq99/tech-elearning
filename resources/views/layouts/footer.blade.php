@@ -17,7 +17,6 @@
             <ul>
                 <li>Nguyễn Công Quang Minh - 1751010086</li>
                 <li>Hoàng Phạm Minh Trí - </li>
-                <li>Trần Thế Quảng - 1551010105</li>
             </ul>
         </div>
         <!-- Grid column -->
